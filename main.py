@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 settings = get_settings()
 
 oauth2_scheme = OAuth2PasswordBearer(
-    tokenUrl=f"{settings.api_v1_prefix}/token")
+    tokenUrl=f"{settings.api_v1_prefix}/login")
 
 rate_limiter = defaultdict(list)
 
