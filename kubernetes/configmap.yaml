@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-config
+  namespace: auth-service
+data:
+  # API Settings
+  API_V1_PREFIX: "/api/v1"
+  PROJECT_NAME: "Auth Microservice"
+  
+  # Token Expiration
+  ACCESS_TOKEN_EXPIRE_MINUTES: "30"
+  REFRESH_TOKEN_EXPIRE_DAYS: "7"
+  
+  # JWT Algorithm
+  ALGORITHM: "HS256"
+  
+  # CORS Origins (JSON array format)
+  CORS_ORIGINS: '["https://yourdomain.com","https://app.yourdomain.com"]'
+  
+  # Rate Limiting
+  RATE_LIMIT_PER_MINUTE: "10"
+  
+  # Environment
+  ENVIRONMENT: "production"
+  DEBUG: "False"
